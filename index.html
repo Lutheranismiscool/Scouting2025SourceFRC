@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Daedalus 2839</title>
+    <link href="style.css?v=1.312132123731" rel="stylesheet" type="text/css" />
+    <link href="anim.css?v=1.3121231" rel="stylesheet" type="text/css" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700&family=Roboto+Mono:wght@200;300;400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body id="body">
+
+    <div id="initPage" class="viewpage">
+        <div id="initContainer">
+            <div id="initHeader" class="header">Daedalus 2839</div>
+            <div class="line" id="initDivLine"></div>
+            <br>
+            <div id="initFormContainer" class="initFormContainer">
+                <!-- label for="initIdForm" class="initLabel">Name</label> -->
+                <!-- <input id="initIdForm" type="text" class="initForm" placeholder="Your Name" autocomplete="off"></form> -->
+                <select style="height:60px;" id="initIdForm" class="initForm">
+                    <option value="Idiot">Please select a name:</option>
+                    <option value="Abby Julaton">Abby Julaton</option>
+                    <option value="Abby Garcia">Abby Garcia 🦖</option>
+                    <option value="Alex Kiar">Alex Kiar 👅</option>
+                    <option value="Arianna Mortensen">Arianna Mortensen</option>
+                    <optiosn value="Betsy Perez-Munoz">Betsy Perez-Munoz</option>
+                    <option value="Caden Friedle">Caden Friedle</option>
+                    <option value="Connor Lim">Connor Lim</option>
+                    <option value="Elisabeth Walker">Elisabeth Walker</option>
+                    <option value="Ethan Yusuf">Ethan Yusuf 😼</option>
+                    <option value="Jason S.">.json *</option>
+                    <option value="Jibreal Jitkaroon">Jibreal Jitkaroon</option>
+                    <option value="Joseph Perna">Joseph Perna 😊</option>
+                    <option value="Julianne Tang">Julianne Tang 🤷</option>
+                    <option value="Justin Green">Justin Green &#x1F468;&#x200D;&#x2764;&#xFE0F;&#x200D;&#x1F48B;&#x200D;&#x1F468;</option>
+                    <option value="KJ (Killian Zabinsky)">KJ (Killian Zabinsky) כריסטיאן גיא</option>
+                    <option value="Leon Lopez">Leon Lopez</option>
+                    <option value="Mary Grainger">Mary Grainger</option>
+                    <option value="Max Miranda">Max Miranda</option>
+                    <option value="Milena Galiano">Milena Galiano</option>
+                    <option value="Miles Richardson">Miles Richardson 👍️</option>
+                    <option value="Noah Martinez">Noah Martinez</option>
+                    <option value="Oscar Renteria">Oscar Renteria</option>
+                    <option value="Ruhmit Sahu">Ruhmit Sahu</option>
+                    <option value="Ryan Keifer">Ryan Keifer 😐️</option>
+                    <option value="Sloan Blair">Sloan Blair</option>
+                    <option value="Tristan Quintanarcruz">Tristan Quintanarcruzn 🗿</option>
+                    <option value="William Peterson">William Peterson</option>
+                    <option value="Other">Other</option>
+                    <option value="Idiot"></option>
+                </select>
+                <!-- <label for="initNumberForm" class="initLabel">Team # You Scout</label> -->
+                <input id="initNumberForm" type="text" class="initForm" placeholder="Team Number your Scouting"
+                    autocomplete="off"></form>
+                <!-- <label for="initMatchForm" class="initLabel">Match Number</label> -->
+                <input id="initMatchForm" type="text" class="initForm" placeholder="Match Number" autocomplete="off">
+                </form>
+                <!-- <label for="initTeamForm" class="initLabel">Scout Team Number</label> -->
+                <select id="initTeamForm" class="initForm">
+                    <option value="2839">⚙️ 2839</option>
+                </select>
+                <!-- <label for="initPositionForm" class="initLabel">Team Position</label> -->
+                <div id="initPositionContainer">
+                        <select style="height:60px;" id="initPositionForm" class="initForm">
+                    <option value="r1">Red 1</option>
+                    <option value="r2">Red 2</option>
+                    <option value="r3">Red 3</option>
+                    <option value="b1">Blue 1</option>
+                    <option value="b2">Blue 2</option>
+                    <option value="b3">Blue 3</option>
+                </select>
+                    
+                </div>
+                <button id="initBtn">Continue</button>
+                <div style="display:none;" id="btnContainer">
+                    <div id="settingsBtn">
+                        <img src="img/settings.png" class="svgFilter">
+                    </div>
+                    <div id="searchBtn">
+                        <img src="img/search.png" class="svgFilter">
+                    </div>
+                </div>
+            </div>
+            <div id="standbyContainer">
+                <div>
+                    <div id="infoBar"></div>
+                </div>
+                <canvas style="display:none;" id="fieldCanvas"></canvas>
+                <br>
+                <button class="btn1" onclick="transition(1)">Continue</button>
+                <br>
+                <div style="display:none;" id="notesPage">
+                    <textarea id="notes" placeholder="Type your notes here ⮧ &#10Press [alt] to exit"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="autoPage" class="viewpage"></div>
+    <div id="settingsPage">
+        <div id="homePageButton">
+            <div class="settingTitle ">Settings</div>
+            <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" class="svgFilter" id="exitSettingsButton">
+                <path id="filter" stroke="#212b43" fill="#212b43"
+                    d="M12.45 37.65 10.35 35.55 21.9 24 10.35 12.45 12.45 10.35 24 21.9 35.55 10.35 37.65 12.45 26.1 24 37.65 35.55 35.55 37.65 24 26.1Z" />
+            </svg>
+        </div>
+        <div class="settingSubTitle">Appearance Settings─┐</div>
+        <div class="settingContainer" style="flex-direction: column;">
+            <div style="width: 55%">
+                <div class="settingSubheader">Theme</div>
+                <div class="settingNote">Adjust the way the app looks </div>
+            </div>
+            <div class="settingButtonRow">
+                <button class="appearanceBtnElem" id="styleMilkshake">Milkshake</button>
+                <button class="appearanceBtnElem" id="styleIceberg">Iceberg</button>
+                <button class="appearanceBtnElem" id="styleLavender">Lavender</button>
+                <button class="appearanceBtnElem" id="styleHightide">High Tide</button>
+                <button class="appearanceBtnElem" id="styleEvergreen">Evergreen</button>
+            </div>
+
+            <div class="settingButtonRow">
+                <button class="appearanceBtnElem" id="styleOlivia">Olivia</button>
+                <button class="appearanceBtnElem" id="style2077">2077 CE</button>
+                <button class="appearanceBtnElem" id="styleAlpine">Alpine</button>
+                <button class="appearanceBtnElem" id="styleCarbon">Carbon</button>
+                <button class="appearanceBtnElem" id="styleShadow">Shadow</button>
+            </div>
+
+            <div class="settingNote">Set the theme to your own colors</div>
+            <div class="settingButtonRow">
+                <input class="appearanceForm" id="mainColor" type="text" placeholder="main"></input>
+                <input class="appearanceForm" id="subColor" type="text" placeholder="sub"></input>
+                <input class="appearanceForm" id="bgColor" type="text" placeholder="bg"></input>
+                <input class="appearanceForm" id="highlightColor" type="text" placeholder="highlight"></input>
+                <input class="appearanceForm" id="altBgColor" type="text" placeholder="alt-Bg"></input>
+            </div>
+            <div class="settingButtonRow" id="customStyleContainer">
+                <button class="appearanceBtnElem" id="customStyleBtn">Set Colors</button>
+            </div>
+            <div style="width: 100%">
+            </div>
+        </div>
+        <div class="settingContainer">
+            <div style="width: 55%">
+                <div class="settingSubheader">Font</div>
+                <div class="settingNote">Adjust the typography of the site</div>
+            </div>
+        </div>
+        <div>
+            <div class = "settingSubheader">QOL Settings</div>
+            <button id = "flipBtn" class = "appearanceBtnElem red">Funny Sounds</button>
+            <button id = "timerBtn" class ="appearanceBtnElem red">Use Timer</button>
+        </div>
+    </div>
+    <div id="searchPage">
+        <input type="text" id="searchForm" placeholder="Match Number"></input>
+        <button id="searchConfirm">Find Match</button>
+        <div id="qrDisplay"><div id = "qrImage"></div></div>
+        <div id="qrTextDisplay"></div>
+        <button id="searchReturn">⇦</button>
+    </div>
+
+
+    <div id="mainPage" class="viewpage mainPage">
+        <div id="displayBar">
+            <div class = "flex">
+                <div style="display:none;" id="display-match"></div>
+                <div style="display:none;" id="display-team"></div>
+            </div>
+            <div id="display-timer"></div>
+            <div class = "flex">
+                <button id = "back" class = "autoButton">⇦</button>
+                <button id = "continue" class = "autoButton">⇨</button>
+            </div>
+        </div>
+        <div id="reset" onclick="abortMatch()">Leave</div>
+    </div>
+
+    <script type="text/javascript">
+        var hook = true;
+        window.onbeforeunload = function () {
+            if (hook) {
+                return "Error."
+            }
+        }
+        function unhook() {
+            hook = false;
+        }
+    </script>
+
+    <script src="settings.js?v=1.31312231"></script>
+    <script src="settings2.js?v=1.3112231"></script>
+    <script src="qr.js?v=1.3121231"></script>
+    <script src="script.js?v=2.24"></script>
+
+</body>
+
+</html>
